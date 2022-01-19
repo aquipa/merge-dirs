@@ -68,7 +68,7 @@ function fileAsk (src, dest) {
   inquirer.prompt([question], resolveConflict(src, dest))
 }
 
-export default function mergeDirs (src, dest, conflictResolver = conflictResolvers.skip) {
+export function mergeDirs (src, dest, conflictResolver = conflictResolvers.skip) {
   // handle false, for backward compatability
   if (conflictResolver === false) {
     conflictResolver = conflictResolvers.skip
